@@ -1,0 +1,55 @@
+@use "./../base/mixins" as m;
+
+.proyecto{
+    display: grid;
+    gap: 3rem;
+    grid-template-rows: 20rem 1fr;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    
+    @include m.tablet{
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: inherit;
+        margin-bottom: 2.5rem;
+    }
+
+    .proyecto-imagen{
+        width: 100%;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .proyecto-informacion{
+        // background-color: blue;
+
+        h3{
+            text-align: center;
+            margin-top: 0;
+        }
+
+        p{
+            font-size: 2rem;
+        }
+    }
+}
+
+.proyecto-enlace{
+    display: flex;
+    justify-content: center;
+     
+    a{
+        background-color: red;
+        border-radius: 1.5rem;
+        color: white;
+        font-size: 1.5rem;
+        padding: 1rem 3rem;
+        transition: background-color .3s ease-in-out;
+
+        &:hover{
+            background-color: darken($color: red, $amount: 20);
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@use "./../base/mixins" as m;
+
+.contacto{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    
+    @include m.tablet{
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .contacto-cv{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .menu-redes{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        font-size: 4rem;
+    }
+}
+
+.btn-cv{
+    display: flex;
+    justify-content: center;
+
+    a{
+        background-color: red;
+        border-radius: 2rem;
+        color: white;
+        font-size: 2rem;
+        margin-top: 2rem;
+        padding: 1rem 3rem;
+        transition: background-color .3s ease-in-out;
+
+        &:hover{
+            background-color: rebeccapurple;
+        }
+    }
+}

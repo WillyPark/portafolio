@@ -1,0 +1,32 @@
+@use "./../base/mixins" as m;
+
+.navMenu{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: blueviolet;
+    height: 8rem;
+    z-index: 100;
+}
+
+.ulNavMenu{
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+
+    @include m.tablet{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+
+    .liNavMenu{
+        @include m.boton( red, black );
+        display: none;
+
+        @include m.tablet{
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+@use "./../base/variables" as v;
+@use "./../base/mixins" as m;
+
+.about{
+    background-color: v.$color-fondo;
+
+    .about-contenido{
+        display: grid;
+        grid-template-rows: 20rem 1fr;
+        
+        @include m.tablet{
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: inherit;
+        }
+
+        .about-foto{
+            height: 100%;
+            text-align: center;
+
+            @include m.tablet{
+                height: 90%;
+            }
+            
+            img{
+                border-radius: 3rem;
+                height: 100%;
+                
+                @include m.tablet{
+                    border-radius: 2rem;
+                }
+            }
+        }
+    
+        .about-info{
+            text-align: justify;
+            font-size: 2rem;
+            line-height: 1.5;
+            padding: 1rem 2rem 0;
+
+            @include m.tablet{
+                padding: 0;
+            }
+        }
+    }
+}
