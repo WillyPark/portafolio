@@ -7,6 +7,12 @@
     background-color: blueviolet;
     height: 8rem;
     z-index: 100;
+
+    .responsive-menu{
+        position: absolute;
+        color: white;
+        font-size: 2rem;
+    }
 }
 
 .ulNavMenu{

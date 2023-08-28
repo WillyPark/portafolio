@@ -9,6 +9,10 @@ export const NavMenu = () => {
                     <li><a href="#tecnologias" className="liNavMenu">Tecnologías</a></li>
                     <li><a href="#contacto" className="liNavMenu">Contacto</a></li>
                 </ul>
+
+                <div className="responsive-menu">
+                    <i className="fas fa-bars"></i>
+                </div>
             </div>
         </nav>
     )
