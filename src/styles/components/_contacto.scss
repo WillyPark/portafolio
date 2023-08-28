@@ -20,6 +20,14 @@
         justify-content: center;
         gap: 3rem;
         font-size: 4rem;
+
+        a{
+            transition: color .3s ease-in-out;
+            
+            &:hover{
+                color: blueviolet;
+            }
+        }
     }
 }
 
