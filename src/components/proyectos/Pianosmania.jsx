@@ -2,7 +2,7 @@ export const Pianosmania = () => {
     return (
         <div className="proyecto">
             <div className="proyecto-imagen">
-                <img loading="lazy" src="/img/pianosmania.jpg" alt="Pianosmania" />
+                <img loading="lazy" src="./img/pianosmania.jpg" alt="Pianosmania" />
             </div>
 
             <div className="proyecto-informacion">

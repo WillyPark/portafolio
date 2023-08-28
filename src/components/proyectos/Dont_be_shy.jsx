@@ -2,7 +2,7 @@ export const Dont_be_shy = () => {
     return (
         <div className="proyecto">
             <div className="proyecto-imagen">
-                <img loading="lazy" src="/img/dont-be-shy.jpg" alt="Pianosmania" />
+                <img loading="lazy" src="./img/dont-be-shy.jpg" alt="Pianosmania" />
             </div>
 
             <div className="proyecto-informacion">

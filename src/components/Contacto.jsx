@@ -15,7 +15,7 @@ export const Contacto = () => {
 
                     <div className="menu-redes">
                         <a href="mailto:l.jimenez.leon97@gmail.com"><i className="far fa-envelope"></i></a>
-                        <a href="www.linkedin.com/in/luis-enrique-jiménez-león-19b149185"><i className="fab fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/luis-enrique-jiménez-león-19b149185"><i className="fab fa-linkedin"></i></a>
                         <a href="https://www.instagram.com/william_park5/"><i className="fab fa-instagram"></i></a>
                     </div>
                 </div>
