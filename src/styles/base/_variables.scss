@@ -1,4 +1,10 @@
 
+$fondo-principal: #0a516d;
+$fondo-secundario: #8d2036;
+$fondo-secundario-hover: lighten($color: $fondo-secundario, $amount: 8);
+
+$color-texto:#e5e5f7;
 $color-fondo: #f2f3f7;
+
 $telefono: 768px;
 $tablet: 968px;

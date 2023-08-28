@@ -1,4 +1,5 @@
 @use "./../base/mixins" as m;
+@use "./../base/variables" as v;
 
 .proyecto{
     display: grid;
@@ -23,7 +24,6 @@
     }
 
     .proyecto-informacion{
-        // background-color: blue;
 
         h3{
             text-align: center;
@@ -41,15 +41,16 @@
     justify-content: center;
      
     a{
-        background-color: red;
+        background-color: v.$fondo-secundario;
         border-radius: 1.5rem;
-        color: white;
-        font-size: 1.5rem;
+        color: v.$color-texto;
+        font-size: 1.7rem;
+        font-weight: 700;
         padding: 1rem 3rem;
         transition: background-color .3s ease-in-out;
 
         &:hover{
-            background-color: darken($color: red, $amount: 20);
+            background-color: v.$fondo-secundario-hover;
         }
     }
 }

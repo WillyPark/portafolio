@@ -1,12 +1,14 @@
 @use "./../base/mixins" as m;
+@use "./../base/variables" as v;
 
 .navMenu{
     width: 100%;
     position: fixed;
     top: 0;
-    background-color: blueviolet;
-    height: 8rem;
-    z-index: 100;
+    background-color: v.$fondo-principal;
+    // background-color: #213142;
+    height: 7rem;
+    z-index: 110;
 
     .responsive-menu{
         align-items: center;
@@ -16,7 +18,7 @@
         justify-content: flex-end;
         padding-right: 2rem;
         width: 100%;
-        height: 8rem;
+        height: 7rem;
         animation-name: menuAparecer; //TODO: Averiguar como arreglar de que se posicione después de que termina la animación del puesto
         animation-delay: 2s;
         animation-duration: .5s;
@@ -35,7 +37,7 @@
     align-items: center;
     display: flex;
     gap: 2rem;
-    height: 8rem;
+    height: 7rem;
     flex-direction: column;
     margin: 0;
     display: none;
@@ -47,7 +49,7 @@
     }
 
     .liNavMenu{
-        @include m.boton( red, black );
+        @include m.boton( v.$fondo-principal, v.$color-texto );
     }
 }
 

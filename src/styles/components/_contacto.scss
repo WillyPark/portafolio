@@ -1,4 +1,10 @@
 @use "./../base/mixins" as m;
+@use "./../base/variables" as v;
+
+.contacto-fondo{
+    // background-color: v.$fondo-secundario;
+    padding-bottom: 2.5rem;
+}
 
 .contacto{
     display: grid;
@@ -7,6 +13,7 @@
     
     @include m.tablet{
         grid-template-columns: 2fr 1fr;
+        grid-template-rows: inherit;
     }
 
     .contacto-cv{
@@ -20,12 +27,13 @@
         justify-content: center;
         gap: 3rem;
         font-size: 4rem;
-
+        
         a{
+            color: v.$fondo-secundario;
             transition: color .3s ease-in-out;
             
             &:hover{
-                color: blueviolet;
+                color: v.$fondo-secundario-hover;
             }
         }
     }
@@ -36,16 +44,17 @@
     justify-content: center;
 
     a{
-        background-color: red;
+        background-color: v.$fondo-secundario;
         border-radius: 2rem;
-        color: white;
+        color: v.$color-texto;
         font-size: 2rem;
+        font-weight: 700;
         margin-top: 2rem;
         padding: 1rem 3rem;
         transition: background-color .3s ease-in-out;
 
         &:hover{
-            background-color: rebeccapurple;
+            background-color: v.$fondo-secundario-hover;
         }
     }
 }

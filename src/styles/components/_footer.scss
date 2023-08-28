@@ -1,5 +1,9 @@
+@use "./../base/variables" as v;
+
 .footer{
-    background: linear-gradient(rgba(84,93,220,.45), rgba(96,171,245,.15));
+    // background: linear-gradient(rgba(84,93,220,.45), rgba(96,171,245,.15));
+    background-color: v.$fondo-principal;
+    color: v.$color-texto;
     font-size: 2rem;
     padding: 1rem 2rem;
     text-align: center;

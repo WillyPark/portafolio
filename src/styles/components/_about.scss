@@ -3,6 +3,11 @@
 
 .about{
     background-color: v.$color-fondo;
+    padding-top: 2.5rem;
+
+    h2{
+        margin-top: 0;
+    }
 
     .about-contenido{
         display: grid;
