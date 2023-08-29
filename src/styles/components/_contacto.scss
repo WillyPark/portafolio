@@ -1,11 +1,6 @@
 @use "./../base/mixins" as m;
 @use "./../base/variables" as v;
 
-.contacto-fondo{
-    // background-color: v.$fondo-secundario;
-    padding-bottom: 2.5rem;
-}
-
 .contacto{
     display: grid;
     grid-template-rows: 1fr 1fr;

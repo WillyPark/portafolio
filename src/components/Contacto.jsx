@@ -1,6 +1,6 @@
 export const Contacto = () => {
     return (
-        <section className="seccion contacto-fondo" id="contacto">
+        <section className="seccion" id="contacto">
             <div className="contenedor">
                 <h2>Contacto</h2>
 
