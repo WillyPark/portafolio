@@ -12,19 +12,17 @@
     .about-contenido{
         display: grid;
         grid-template-rows: 20rem 1fr;
+        padding-bottom: 1.5rem;
         
         @include m.tablet{
             grid-template-columns: 1fr 2fr;
             grid-template-rows: inherit;
+            padding-bottom: 2.5rem;
         }
 
         .about-foto{
             height: 100%;
             text-align: center;
-
-            @include m.tablet{
-                height: 90%;
-            }
             
             img{
                 border-radius: 3rem;
@@ -32,6 +30,7 @@
                 
                 @include m.tablet{
                     border-radius: 2rem;
+                    height: 27rem;
                 }
             }
         }

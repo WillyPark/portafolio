@@ -34,9 +34,11 @@
     }
 
     .mostrar{
+        // z-index: -1;
+        // top: 6rem;
         display: block;
         animation-name: menu;
-        animation-duration: 1s;
+        animation-duration: .9s;
         animation-direction: alternate;
     }
 }
@@ -49,7 +51,9 @@
     position: absolute;
     left: 0;
     right: 0;
-    transition: height .3s ease-out;
+    // top: -30rem;
+    // transition: height .3s ease-out;
+    // transition: top .5s ease;
 
     @include m.tablet{
         align-items: center;
@@ -70,12 +74,6 @@
     }
 }
 
-// .inversa{
-//     animation-name: inversa;
-//     animation-duration: 1s;
-//     animation-fill-mode: forwards;
-// }
-
 @keyframes menu{
     0%{
         transform: translateY( -25rem );
@@ -84,12 +82,3 @@
         transform: translateY( 0 );
     }
 }
-
-// @keyframes inversa{
-//     0%{
-//         transform: translateY( 0);
-//     }
-//     100%{
-//         transform: translateY( -25rem );
-//     }
-// }
