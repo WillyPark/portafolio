@@ -14,13 +14,17 @@ export const NavMenu = () => {
     return (
         <nav className="navMenu">
             <div className="contenedor">
-                <div className="responsive-menu" onClick={ menuResponsive }>
-                    <i className="fas fa-bars"></i>
+                <div className="barra">
+                    <a onClick={ quitarMenu } href="#inicio" className="navMenu-logo">Portafolio</a>
+
+                    <div className="responsive-menu" onClick={ menuResponsive }>
+                        <i className="fas fa-bars"></i>
+                    </div>
                 </div>
 
                 <ul className={`ulNavMenu ${ mostrar ? "mostrar" : "" }`}>
                     <li onClick={ quitarMenu }><a href="#inicio" className="liNavMenu">Inicio</a></li>
-                    <li onClick={ quitarMenu }><a href="#about" className="liNavMenu">Sobre Mi</a></li>
+                    <li onClick={ quitarMenu }><a href="#about" className="liNavMenu">Sobre Mí</a></li>
                     <li onClick={ quitarMenu }><a href="#proyectos" className="liNavMenu">Proyectos</a></li>
                     <li onClick={ quitarMenu }><a href="#tecnologias" className="liNavMenu">Tecnologías</a></li>
                     <li onClick={ quitarMenu }><a href="#contacto" className="liNavMenu">Contacto</a></li>

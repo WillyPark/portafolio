@@ -1,4 +1,10 @@
 @use "./../base/mixins" as m;
+@use "./../base/variables" as v;
+
+.tecnologias{
+    background-color: v.$color-fondo;
+    padding: 2.5rem 0;
+}
 
 .iconos-tecnologias{
     align-items: center;
@@ -25,8 +31,8 @@
 
         span{
             padding: 1rem 3rem;
-            background-color: red;
-            color: white;
+            background-color: v.$fondo-secundario;
+            color: v.$color-texto;
             border-radius: 1.5rem;
             font-size: 1.5rem;
             margin-top: 2rem;
@@ -38,7 +44,7 @@
 
             &::before{
                 content: '';
-                border: 1.2rem solid red;
+                border: 1.2rem solid v.$fondo-secundario;
                 border-left-color: transparent;
                 border-top-color: transparent;
                 border-right-color: transparent;

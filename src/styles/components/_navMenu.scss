@@ -2,62 +2,94 @@
 @use "./../base/variables" as v;
 
 .navMenu{
-    width: 100%;
+    width: 100vw;
     position: fixed;
     top: 0;
     background-color: v.$fondo-principal;
-    // background-color: #213142;
-    height: 7rem;
+    height: 6rem;
     z-index: 110;
 
-    .responsive-menu{
-        align-items: center;
-        color: white;
+    .barra{
         display: flex;
-        font-size: 4.2rem;
-        justify-content: flex-end;
-        padding-right: 2rem;
-        width: 100%;
-        height: 7rem;
-        animation-name: menuAparecer; //TODO: Averiguar como arreglar de que se posicione después de que termina la animación del puesto
-        animation-delay: 2s;
-        animation-duration: .5s;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1rem;
+        height: 6rem;
 
         @include m.tablet{
             display: none;
         }
     }
 
+    .navMenu-logo{
+        color: v.$color-texto;
+        font-size: 2rem;
+        z-index: 10;
+    }
+
+    .responsive-menu{
+        color: v.$color-texto;
+        font-size: 4.2rem;
+        z-index: 10;
+    }
+
     .mostrar{
         display: block;
+        animation-name: menu;
+        animation-duration: 1s;
+        animation-direction: alternate;
     }
 }
 
 .ulNavMenu{
-    align-items: center;
-    display: flex;
-    gap: 2rem;
-    height: 7rem;
-    flex-direction: column;
+    height: 6rem;
     margin: 0;
     display: none;
+    padding-left: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transition: height .3s ease-out;
 
     @include m.tablet{
+        align-items: center;
         display: flex;
+        gap: 2rem;
         flex-direction: row;
         justify-content: space-between;
+        position: inherit;
     }
 
     .liNavMenu{
         @include m.boton( v.$fondo-principal, v.$color-texto );
+        border-radius: 0;
+
+        @include m.tablet{
+            border-radius: 2rem;
+        }
     }
 }
 
-@keyframes menuAparecer{
+// .inversa{
+//     animation-name: inversa;
+//     animation-duration: 1s;
+//     animation-fill-mode: forwards;
+// }
+
+@keyframes menu{
     0%{
-        opacity: 0;
+        transform: translateY( -25rem );
     }
     100%{
-        opacity: 1;
+        transform: translateY( 0 );
     }
 }
+
+// @keyframes inversa{
+//     0%{
+//         transform: translateY( 0);
+//     }
+//     100%{
+//         transform: translateY( -25rem );
+//     }
+// }

@@ -2,7 +2,7 @@ export const About = () => {
     return (
         <section className="about" id="about">
             <div className="contenedor">
-                <h2>Sobre Mi</h2>
+                <h2>Sobre Mí</h2>
 
                 <div className="about-contenido">
                     <div className="about-foto">
