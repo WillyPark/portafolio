@@ -2,7 +2,8 @@
 @use "./../base/mixins" as m;
 
 .header{
-    background-color: #e5e5f7;
+    background: rgb(242,243,247);
+    background: radial-gradient(circle, rgba(242,243,247,1) 7%, rgba(10,81,109,1) 100%);
     color: v.$color-encabezados;
     max-height: 100rem;
     height: 100vh;
