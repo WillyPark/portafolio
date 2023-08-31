@@ -14,7 +14,7 @@ export const Dont_be_shy = () => {
                 <p className="proyecto-tecnologias">HTML, CSS, JavaScript, PHP, AJAX y MySQL</p>
 
                 <div className="proyecto-enlace">
-                    <a className="" href="http://www.dont-be-shy.infinityfreeapp.com/index.php" target="_blank">Ver Proyecto</a>
+                    <a className="" href="https://www.dont-be-shy.infinityfreeapp.com/index.php" target="_blank">Ver Proyecto</a>
                 </div>
             </div>
         </div>

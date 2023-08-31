@@ -14,7 +14,7 @@ export const Secundaria = () => {
                 <p className="proyecto-tecnologias">HTML, CSS, JavaScript, PHP, MVC y MySQL</p>
 
                 <div className="proyecto-enlace">
-                    <a className="" href="http://secundaria123.infinityfreeapp.com/" target="_blank">Ver Proyecto</a>
+                    <a className="" href="https://secundaria123.infinityfreeapp.com/" target="_blank">Ver Proyecto</a>
                 </div>
             </div>
         </div>
