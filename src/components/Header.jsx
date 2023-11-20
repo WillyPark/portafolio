@@ -1,4 +1,5 @@
 import { NavMenu } from "./NavMenu"
+import { Particulas } from "./Particulas/Particulas"
 
 export const Header = () => {
   return (
@@ -10,6 +11,10 @@ export const Header = () => {
           <h2 className="puesto">Desarrollador Full Stack</h2>
 
           <a className="cv" href="./document/cv-luis.pdf" target="_blank">Descargar CV</a>
+        </div>
+
+        <div className="contenedor-particulas">
+          <Particulas />
         </div>
     </div>
   )
