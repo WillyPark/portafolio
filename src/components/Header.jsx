@@ -8,7 +8,7 @@ export const Header = () => {
 
         <div className="header-titulo">
           <h1 className="nombre">Luis Enrique Jiménez León</h1>
-          <h2 className="puesto">Desarrollador Full Stack</h2>
+          <h2 className="puesto">Desarrollador Full Stack Jr.</h2>
 
           <a className="cv" href="./document/cv-luis.pdf" target="_blank">Descargar CV</a>
         </div>
