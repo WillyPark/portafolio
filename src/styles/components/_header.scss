@@ -1,0 +1,116 @@
+@use "./../base/variables" as v;
+@use "./../base/mixins" as m;
+
+.header{
+    // background: rgb(242,243,247);
+    // background: radial-gradient(circle, rgba(242,243,247,1) 7%, rgba(10,81,109,1) 100%);
+    // color: v.$color-encabezados;
+    // background-color: black;
+    max-height: 100rem;
+    height: 100vh;
+
+    &-titulo{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        z-index: 10;
+    }
+
+    .cv{
+        align-items: center;
+        background-color: v.$fondo-secundario;
+        border-radius: 2rem;
+        color: v.$color-texto;
+        display: flex;
+        font-size: 1.8rem;
+        font-weight: 700;
+        justify-content: center;
+        opacity: 0;
+        padding: 1.5rem 3rem;
+        text-align: center;
+        transition: background-color .3s ease-in-out;
+        animation-name: cv;
+        animation-delay: 1.5s;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        
+        @include m.tablet{
+            font-size: 2rem;
+            animation-delay: 2s;
+        }
+
+        &:hover{
+            background-color: v.$fondo-secundario-hover;
+        }
+    }
+
+    .nombre{
+        animation-name: nombre;
+        animation-duration: 2s;
+        color: v.$color-texto;
+        margin-bottom: 0;
+        font-size: 4.5rem;
+        
+        @include m.tablet{
+            animation-duration: 3s;
+            font-size: 5rem;
+        }
+    }
+    
+    .puesto{
+        animation-name: puesto;
+        animation-duration: 2s;
+        color: v.$color-texto;
+        font-size: 3rem;
+        padding-top: 2.5rem;
+
+        @include m.tablet{
+            font-size: 4rem;
+            animation-duration: 3s;
+        }
+    }
+
+    .contenedor-particulas{
+        background-color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        z-index: -1;
+    }
+}
+
+@keyframes nombre {
+    0%{
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes puesto {
+    0%{
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes cv{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

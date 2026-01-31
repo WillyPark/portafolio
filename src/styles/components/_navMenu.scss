@@ -1,0 +1,84 @@
+@use "./../base/mixins" as m;
+@use "./../base/variables" as v;
+
+.navMenu{
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    background-color: v.$fondo-principal;
+    height: 6rem;
+    z-index: 110;
+
+    .barra{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1rem;
+        height: 6rem;
+
+        @include m.tablet{
+            display: none;
+        }
+    }
+
+    .navMenu-logo{
+        color: v.$color-texto;
+        font-size: 2.5rem;
+        z-index: 10;
+    }
+
+    .responsive-menu{
+        color: v.$color-texto;
+        font-size: 3.5rem;
+        z-index: 10;
+    }
+
+    .mostrar{
+        // z-index: -1;
+        // top: 6rem;
+        display: block;
+        animation-name: menu;
+        animation-duration: .9s;
+        animation-direction: alternate;
+    }
+}
+
+.ulNavMenu{
+    height: 6rem;
+    margin: 0;
+    display: none;
+    padding-left: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    // top: -30rem;
+    // transition: height .3s ease-out;
+    // transition: top .5s ease;
+
+    @include m.tablet{
+        align-items: center;
+        display: flex;
+        gap: 2rem;
+        flex-direction: row;
+        justify-content: space-between;
+        position: inherit;
+    }
+
+    .liNavMenu{
+        @include m.boton( v.$fondo-principal, v.$color-texto );
+        border-radius: 0;
+
+        @include m.tablet{
+            border-radius: 2rem;
+        }
+    }
+}
+
+@keyframes menu{
+    0%{
+        transform: translateY( -25rem );
+    }
+    100%{
+        transform: translateY( 0 );
+    }
+}
