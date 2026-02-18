@@ -1,18 +1,18 @@
 @use "./variables" as v;
 
-@mixin telefono{
-    @media (min-width: v.$telefono ){
+@mixin telefono {
+    @media (min-width: v.$telefono ) {
         @content;
     }
 }
 
-@mixin tablet{
-    @media( min-width: v.$tablet ){
+@mixin tablet {
+    @media(min-width: v.$tablet ) {
         @content;
     }
 }
 
-@mixin boton( $bgColor, $colorTexto ){
+@mixin boton($bgColor, $colorTexto ) {
     background-color: $bgColor;
     padding: 1.4rem 4rem;
     color: $colorTexto;
@@ -28,7 +28,7 @@
 
     &:hover,
     &.active {
-        background-color: darken( $bgColor, 10% );
+        background-color: darken($bgColor, 10.1%);
         cursor: pointer;
     }
 }

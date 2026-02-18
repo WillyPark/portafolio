@@ -6,7 +6,7 @@ export const Contacto = () => {
 
                 <div className="contacto">
                     <div className="contacto-cv">
-                        <p>Envíame un correo o contactame mediante cualquiera de mis redes</p>
+                        <p>Envíame un correo o contactame mediante cualquiera de mis redes.</p>
 
                         <div className="btn-cv">
                             <a href="./document/cv-luis.pdf" target="_blank">Descargar CV</a>
