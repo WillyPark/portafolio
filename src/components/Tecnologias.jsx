@@ -31,6 +31,11 @@ export const Tecnologias = () => {
                     </div>
 
                     <div className="icono">
+                        <img src="./git.svg" alt="Git" />
+                        <span>Git</span>
+                    </div>
+
+                    <div className="icono">
                         <img src="./react.svg" alt="React" />
                         <span>React</span>
                     </div>
@@ -53,6 +58,11 @@ export const Tecnologias = () => {
                     <div className="icono">
                         <img className="python" src="./python.svg" alt="Python" />
                         <span>Python</span>
+                    </div>
+
+                    <div className="icono">
+                        <img src="./github.svg" alt="GitHub" />
+                        <span>GitHub</span>
                     </div>
                 </div>
             </div>

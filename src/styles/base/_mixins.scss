@@ -12,6 +12,12 @@
     }
 }
 
+@mixin desktop {
+    @media (min-width: v.$desktop) {
+        @content;
+    }
+}
+
 @mixin boton($bgColor, $colorTexto ) {
     background-color: $bgColor;
     padding: 1.4rem 4rem;

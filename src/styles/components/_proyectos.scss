@@ -1,57 +1,101 @@
 @use "./../base/mixins" as m;
 @use "./../base/variables" as v;
 
-.proyecto{
+.proyectos-contenedor {
     display: grid;
-    gap: 1.5rem;
-    grid-template-rows: 20rem 1fr;
+    gap: 5rem;
+    margin-bottom: 5rem;
     width: 90%;
     margin: 0 auto;
-    margin-bottom: 3.5rem;
-    
-    @include m.tablet{
-        gap: 2rem;
-        grid-template-columns: 2fr 1fr;
-        grid-template-rows: inherit;
-        margin-bottom: 2.5rem;
-    }
 
-    .proyecto-imagen{
+    @include m.telefono {
+        grid-template-columns: 1fr 1fr;
         width: 100%;
-
-        img{
-            width: 100%;
-        }
     }
 
-    .proyecto-informacion{
-
-        h3{
-            text-align: center;
-            margin-top: 0;
-        }
-
-        p{
-            font-size: 2rem;
-        }
+    @include m.tablet {
+        gap: 6rem;
     }
 }
 
-.proyecto-enlace{
+.proyecto {
     display: flex;
-    justify-content: center;
-     
-    a{
-        background-color: v.$fondo-secundario;
-        border-radius: 1.5rem;
-        color: v.$color-texto;
-        font-size: 1.7rem;
-        font-weight: 700;
-        padding: 1rem 3rem;
-        transition: background-color .3s ease-in-out;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem 2rem;
+    -webkit-box-shadow: -1px 5px 15px 14px rgba(242, 243, 247, 1);
+    box-shadow: -1px 5px 15px 14px rgba(242, 243, 247, 1);
+    border: 2px solid v.$color-fondo;
+    border-radius: 1rem;
+    transition: .3s;
+    transform: scale(1);
 
-        &:hover{
-            background-color: v.$fondo-secundario-hover;
+    &:hover {
+        transition: 0.3s;
+        transform: scale(1.05);
+    }
+
+
+    h3 {
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .proyecto-imagen {
+        img {
+            width: 100%;
+
+            height: 20rem;
+
+            @include m.tablet {
+                height: 25rem;
+            }
+
+            @include m.desktop {
+                height: 32rem;
+            }
+        }
+    }
+
+    .proyecto-informacion {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+
+        p {
+            font-size: 2rem;
+
+            &:nth-child(1),
+            &:nth-child(2) {
+                margin-bottom: 0;
+            }
+        }
+
+        .proyecto-enlace {
+            display: flex;
+            justify-content: center;
+            margin-top: auto;
+
+            a {
+                background-color: v.$fondo-secundario;
+                border-radius: 1.5rem;
+                color: v.$color-texto;
+                font-size: 1.7rem;
+                font-weight: 700;
+                padding: 1rem 3.5rem;
+                transition: background-color .3s ease-in-out;
+                text-align: center;
+                width: 100%;
+
+                &:hover {
+                    background-color: v.$fondo-secundario-hover;
+                }
+
+                @include m.telefono {
+                    width: auto;
+                }
+            }
         }
     }
 }

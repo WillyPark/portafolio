@@ -9,11 +9,12 @@ import 'swiper/css/scrollbar';
 import { Pianosmania } from './proyectos/Pianosmania';
 import { Dont_be_shy } from './proyectos/Dont_be_shy';
 import { Secundaria } from './proyectos/Secundaria';
+import { Cralatin } from './proyectos/Cralatin';
 
 export const Proyectos = () => {
     let x = false;
 
-    if( window.matchMedia("(min-width: 768px)").matches ){
+    if (window.matchMedia("(min-width: 768px)").matches) {
         x = true;
     }
 
@@ -22,19 +23,19 @@ export const Proyectos = () => {
             <div className="contenedor">
                 <h2>Proyectos</h2>
 
-                <Swiper
-                    modules={[Navigation, Pagination ]}
+                {/* <Swiper
+                    modules={[Navigation, Pagination]}
                     spaceBetween={50}
                     slidesPerView={1}
-                    navigation={ x }
-                    grabCursor={ true }
-                    loop={ true }
+                    navigation={x}
+                    grabCursor={true}
+                    loop={true}
                     pagination={{ clickable: true }}
                 >
                     <SwiperSlide>
                         <Pianosmania />
                     </SwiperSlide>
-                    
+
                     <SwiperSlide>
                         <Dont_be_shy />
                     </SwiperSlide>
@@ -42,7 +43,17 @@ export const Proyectos = () => {
                     <SwiperSlide>
                         <Secundaria />
                     </SwiperSlide>
-                </Swiper>
+
+                    <SwiperSlide>
+                        <Cralatin />
+                    </SwiperSlide>
+                </Swiper> */}
+                <div className="proyectos-contenedor">
+                    <Pianosmania />
+                    <Dont_be_shy />
+                    <Secundaria />
+                    <Cralatin />
+                </div>
             </div>
         </section>
     )
